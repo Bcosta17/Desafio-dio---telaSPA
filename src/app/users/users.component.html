@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body>
+    <div class="adicionar"><button class="btn btn-primary">Adicionar usuário</button></div>
+    <div class="user-container">
+    
+    <table class="table">
+        <thead>
+           <tr>
+                <th>User Details</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>
+                    <div class="td-table">
+                        <input type="checkbox" name="" id="">
+                        <div>
+
+                            <img [src]="user.imageUrl" width="60" height="60"/> 
+                            
+                        </div>
+                        <div class="td-text">
+                           <p class="p-blue"> {{user.name}}</p>
+                           <p>{{user.email}}</p>
+                           <p class="p-blue">{{user.phoneNumber}}</p>
+                           <p class="p-gray">Added on {{user.addedOn}}</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="button">
+                        <button class="btn btn-primary ">Editar</button>
+                        <button class="btn btn-danger ms-4">Deleta</button>
+                    </div>
+                </td>
+
+
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+</body>
+</html>
